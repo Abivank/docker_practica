@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyApp — современный цифровой сервис">
+    <title>MyApp — твои возможности</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="container navbar">
+            <a href="#home" class="logo">My<span>App</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Главная</a>
+                <a href="#features">Возможности</a>
+                <a href="#about">О нас</a>
+                <a href="#run">Запуск</a>
+            </div>
+
+            <a href="#contact" class="nav-button">Начать</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="tag">НОВОЕ ПОКОЛЕНИЕ СЕРВИСОВ</span>
+
+                    <h1>Твои идеи.<br>
+                        <span>Твои возможности.</span>
+                    </h1>
+
+                    <p>
+                        Современное пространство для твоих идей,
+                        проектов и новых достижений.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#features" class="button primary">
+                            Исследовать →
+                        </a>
+                        <a href="#about" class="button secondary">
+                            Узнать больше
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        ✦ Просто. Быстро. Удобно.
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-glow"></div>
+
+                    <div class="dashboard">
+                        <div class="dashboard-top">
+                            <div>
+                                <span class="small-label">MY WORKSPACE</span>
+                                <h3>Твоя панель</h3>
+                            </div>
+                            <div class="avatar">M</div>
+                        </div>
+
+                        <div class="welcome-card">
+                            <span>ТВОЙ ПРОГРЕСС</span>
+                            <h2>Всё начинается с идеи.</h2>
+                            <div class="progress">
+                                <div></div>
+                            </div>
+                            <small>Продолжай двигаться вперёд</small>
+                        </div>
+
+                        <div class="stats">
+                            <div class="stat-card">
+                                <span>⚡</span>
+                                <h3>Быстро</h3>
+                                <p>Работай эффективнее</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <span>✦</span>
+                                <h3>Удобно</h3>
+                                <p>Всё под рукой</p>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-footer">
+                            <span class="online-dot"></span>
+                            Система готова к работе
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">ВОЗМОЖНОСТИ</span>
+                    <h2>Всё, что тебе нужно</h2>
+                    <p>Инструменты для продуктивной работы каждый день.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon purple">⚡</div>
+                        <h3>Высокая скорость</h3>
+                        <p>Минималистичный интерфейс без лишних элементов.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon blue">◇</div>
+                        <h3>Современный стиль</h3>
+                        <p>Продуманный дизайн с красивыми цветами и эффектами.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon orange">↗</div>
+                        <h3>Гибкость</h3>
+                        <p>Сайт адаптируется под разные размеры экранов.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container about-content">
+                <div>
+                    <span class="tag">О ПРОЕКТЕ</span>
+                    <h2>Создан для новых идей</h2>
+                </div>
+
+                <p>
+                    MyApp — пример современного веб-интерфейса,
+                    который можно использовать как основу для
+                    портфолио, стартапа или собственного сервиса.
+                </p>
+            </div>
+        </section>
+
+        <section class="run section" id="run">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="tag">ЗАПУСК</span>
+                    <h2>Как запустить</h2>
+                    <p>Нужен только установленный Docker.</p>
+                </div>
+
+                <pre class="code-block">docker run -d -p 8080:80 sharipabumansur/my-app:1.1</pre>
+                <p class="run-note">После запуска откройте http://localhost:8080</p>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-box">
+                <span class="tag">ТВОЙ СЛЕДУЮЩИЙ ШАГ</span>
+                <h2>Готов создать что-то новое?</h2>
+                <p>Начни с идеи и преврати её в реальный проект.</p>
+                <a href="mailto:hello@example.com" class="button primary">
+                    Связаться с нами →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">My<span>App</span></a>
+            <p>© 2026 MyApp. Учебный проект.</p>
+            <a href="#home">Наверх ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>
