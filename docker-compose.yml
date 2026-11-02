@@ -1,0 +1,60 @@
+services:
+  my-app:
+    build: ./my-app
+    image: registry.gitlab.com/sharip_abumansur/docker_practica/my-app:1.0
+    container_name: my-app
+    ports:
+      - "8080:80"
+    depends_on:
+      - my-db
+      - redis
+      - mailpit
+    networks:
+      - app-net
+
+  my-db:
+    build: ./db
+    image: registry.gitlab.com/sharip_abumansur/docker_practica/my-db:1.0
+    container_name: my-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-net
+
+  pass-gen:
+    build: ./pass-gen
+    image: registry.gitlab.com/sharip_abumansur/docker_practica/pass-gen:1.0
+    container_name: pass-gen
+    stdin_open: true
+    tty: true
+    networks:
+      - app-net
+
+  redis:
+    build: ./redis
+    image: registry.gitlab.com/sharip_abumansur/docker_practica/my-redis:1.0
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - app-net
+
+  mailpit:
+    build: ./mailpit
+    image: registry.gitlab.com/sharip_abumansur/docker_practica/my-mailpit:1.0
+    container_name: mailpit
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    networks:
+      - app-net
+
+volumes:
+  db-data:
+
+networks:
+  app-net:
